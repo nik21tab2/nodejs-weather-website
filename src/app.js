@@ -4,8 +4,6 @@ const hbs = require('hbs')
 const geocode = require('./Utils/geocode')
 const forcast = require ('./Utils/forcast')
 
-
-
 const app = express()
 
 //define paths for express config
