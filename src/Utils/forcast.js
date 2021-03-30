@@ -20,7 +20,7 @@ const forcast = (longitude,latitude , callback) =>
         {
             const tempFarenHeit = response.body.current.temperature
             const degrees= (tempFarenHeit - 32)*0.55
-            callback(undefined, response.body.current.weather_descriptions[0] + ". It is currently " + degrees + " degrees out. There is a " + response.body.current.precip + '% chance of rain.')
+            callback(undefined, response.body.current.weather_descriptions[0] + ". It is currently " + degrees + " degrees out. There is a " + response.body.current.precip + '% chance of rain. The humidity is ' + response.body.current.humidity + '%. Feels like ' + response.body.current.feelslike)
 
             //callback(undefined, response.body.daily.data[0].summary + ' It is currently ' + response.body.currently.temperature + ' degress out. There is a ' + response.body.currently.precipProbability + '% chance of rain.')
         }
